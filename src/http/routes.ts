@@ -6,7 +6,7 @@ import { updateProduct } from "./controllers/update-product";
 
 export async function routes(app: FastifyInstance){
     
-    app.get("/list", readProducts)
+    app.get("/products", readProducts)
     app.post("/product", createProducts)
     app.delete("/product", deleteProduct)
     app.patch("/product", updateProduct)

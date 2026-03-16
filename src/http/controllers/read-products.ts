@@ -2,4 +2,6 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 
 export async function readProducts(request: FastifyRequest, reply: FastifyReply){
     
+
+     reply.send("hello, world").status(200)
 }
