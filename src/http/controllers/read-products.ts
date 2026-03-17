@@ -1,7 +1,11 @@
 import type { FastifyReply, FastifyRequest } from "fastify";
+import { prisma } from "../../app";
+
 
 export async function readProducts(request: FastifyRequest, reply: FastifyReply){
-    
 
-     reply.send("hello, world").status(200)
+     const products = await prisma.products.findMany()
+
+
+     reply.send(products).status(200)
 }

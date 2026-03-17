@@ -8,6 +8,5 @@ export async function deleteProduct(request: FastifyRequest, reply: FastifyReply
 
     await prisma.products.delete({where:{ id }})
 
-
     return reply.send("Deletar usuario").status(201)
 }
