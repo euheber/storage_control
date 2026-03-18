@@ -9,13 +9,13 @@ export async function updateProduct(request: FastifyRequest, reply:FastifyReply)
 
     const data: any = {}
 
-    if (product.name !== undefined) {
-        data.name = product.name
-    }
+        if (product.name !== undefined) {
+            data.name = product.name
+        }
 
-    if (product.tag !== undefined) {
-        data.tag = product.tag
-    }
+        if (product.tag !== undefined) {
+            data.tag = product.tag
+        }
 
     await prisma.products.update({where: { id }, data})
 
